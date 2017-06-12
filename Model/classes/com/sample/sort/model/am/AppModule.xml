@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="EmployeeView1"
+    ViewObjectName="com.sample.sort.model.vo.EmployeeView"/>
+  <ViewUsage
+    Name="EmployeeView2"
+    ViewObjectName="com.sample.sort.model.vo.EmployeeView"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink"
+    ViewLinkObjectName="com.sample.sort.model.vo.EmpManagerFkLink"
+    SrcViewUsageName="com.sample.sort.model.am.AppModule.EmployeeView1"
+    DstViewUsageName="com.sample.sort.model.am.AppModule.EmployeeView2"
+    Reversed="false"/>
+</AppModule>
